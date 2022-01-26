@@ -1,0 +1,19 @@
+$grey1: #eee
+$grey2: #ddd
+$grey3: #ccc
+$grey4: #bbb
+$grey5: #aaa
+$grey6: #555
+
+*
+    background-color: #fff
+
+@mixin button
+    background-color: $grey1
+    border-color: $grey1
+    color: #000
+
+    &:disabled
+        background-color: $grey2
+    &:hover
+        background-color: $grey3
