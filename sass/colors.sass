@@ -4,6 +4,7 @@ $grey3: #ccc
 $grey4: #bbb
 $grey5: #aaa
 $grey6: #555
+$red1: #ff9797
 
 *
     background-color: #fff
@@ -17,3 +18,30 @@ $grey6: #555
         background-color: $grey2
     &:hover
         background-color: $grey3
+
+@mixin table
+    display: block
+
+    td:not(.plus)
+        color: red
+
+    thead
+        th
+            background-color: $grey5
+            color: #fff
+
+    td
+        padding: .3em
+        border-bottom-color: $grey3 !important
+
+    td:hover
+        background: $grey1
+
+@mixin input
+
+    background-color: $grey1
+    *
+        background-color: inherit
+
+    div>input:hover
+        color: $grey4

@@ -1,6 +1,16 @@
 @use 'colors'
 @use 'button'
+@use 'grid'
+@use 'input'
 
 button
     @include button.button()
     @include colors.button
+
+.DataGrid
+    @include grid.table
+    @include colors.table
+
+.test
+    @include colors.input
+    @include input.input
