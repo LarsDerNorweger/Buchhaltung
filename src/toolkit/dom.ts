@@ -1,3 +1,14 @@
+/****************************************************
+*
+*   Copyright 2022 
+*
+*   Authors: Colin Böttger
+*
+*   boettger.colin@web.de
+*
+*****************************************************/
+
+
 export { create, };
 
 function create<K extends keyof HTMLElementTagNameMap>(tagName: K, target?: HTMLElement, innerText?: string): HTMLElementTagNameMap[K]
