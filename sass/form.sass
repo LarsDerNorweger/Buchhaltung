@@ -1,0 +1,27 @@
+@use 'button'
+
+@mixin form
+    margin: .5em
+    padding: .5em
+    min-width: 10em
+    display: table
+
+    h1
+        font-size: 1em
+        font-weight: 500
+        padding: 0.2em
+        min-width: 5em
+    label+p
+        font-weight: 400
+        font-size: .8em
+
+    input
+        border: 1px solid #000
+
+    div
+        display: grid
+
+    button
+        @include button.button()
+        position: relative
+        align-items: center
