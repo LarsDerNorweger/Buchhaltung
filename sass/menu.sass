@@ -1,0 +1,24 @@
+@use 'button'
+@use 'colors'
+
+@mixin menu()
+    @include colors.menu()
+    position: sticky
+    top: 0
+    padding-top: .2em
+    *
+        background-color: inherit
+
+    button
+        @include button.button()
+        @include colors.button
+        margin: 0
+    button.selected
+        border-bottom: 1px solid #000
+    button:hover
+        border-bottom: 1px solid #000
+    h1
+        font-size: 1em
+        font-weight: 500
+        margin: .3em
+        border-bottom: 1px solid #000
