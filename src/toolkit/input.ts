@@ -6,7 +6,7 @@ interface Data { [key: string]: () => void; }
 interface InputOptions
 {
     style: 'radio' | 'checkbox';
-    classname: string,
+    classname?: string,
     target?: HTMLElement,
     legend?: string,
 }
@@ -14,7 +14,7 @@ interface InputOptions
 export function createInputList(data: Data, options: InputOptions)
 {
     let res = create('div', options.target);
-    res.classList.add(options.classname);
+    res.classList.add(options.classname || 'DataList');
     if (options.legend)
         create('h1', res, options.legend);
 
@@ -30,7 +30,7 @@ export function createInputList(data: Data, options: InputOptions)
         let e = create('input', c);
         e.type = options.style;
         if (options.style == 'radio')
-            e.name = options.classname;
+            e.name = options.classname || 'DataList';
         e.id = name;
 
         let l = create('label', c, name);
