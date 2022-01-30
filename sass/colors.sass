@@ -1,4 +1,6 @@
-$grey1: #eee
+$grey0: #fcfcfc
+$hover: #f8f8f8
+$grey1: #ebebeb
 $grey2: #ddd
 $grey3: #ccc
 $grey4: #bbb
@@ -33,15 +35,43 @@ $red1: #ff9797
     td
         padding: .3em
         border-bottom-color: $grey3 !important
+        background-color: $grey0
 
     td:hover
         background: $grey1
 
 @mixin input
 
-    background-color: $grey1
+    background-color: $grey0
+
+    &:hover
+        background-color: $hover
     *
         background-color: inherit
 
     div>input:hover
         color: $grey4
+
+@mixin form
+    background-color: $grey0
+
+    &:hover
+        background-color: $hover
+
+    button
+        @include button
+
+    *
+        background-color: inherit
+    input
+        background-color: #fff
+    h1
+        background-color: $grey5
+        color: #fff
+
+@mixin menu()
+    background-color: $grey1
+    button.selected
+        background-color: $grey4
+    button:hover
+        background-color: $grey1 !important

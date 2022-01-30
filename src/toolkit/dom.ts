@@ -9,7 +9,7 @@
 *****************************************************/
 
 
-export { create, };
+export { create, clear, focus };
 
 function create<K extends keyof HTMLElementTagNameMap>(tagName: K, target?: HTMLElement, innerText?: string): HTMLElementTagNameMap[K]
 {
@@ -27,4 +27,17 @@ function create<K extends keyof HTMLElementTagNameMap>(tagName: K, target?: HTML
             elem.innerHTML = innerText;
     }
     return elem;
+}
+
+function clear(target: HTMLElement)
+{
+    while (target.lastChild)
+    {
+        target.removeChild(target.lastChild);
+    }
+}
+
+function focus(target: HTMLElement)
+{
+    target.focus();
 }

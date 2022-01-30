@@ -1,0 +1,42 @@
+body {
+    display: grid;
+    grid-template-areas: "m"
+        "c"
+        "f";
+    height: 100vh;
+    grid-template-rows: auto 1fr 1.5em;
+}
+
+.Menu {
+    grid-area: m;
+}
+
+#Content {
+    grid-area: c;
+    height: auto;
+}
+
+#Footer {
+    grid-area: f;
+    height: auto;
+
+}
+
+#newKonto {
+    display: grid;
+    grid-template-areas:
+        ".f.l";
+    height: 1fr;
+    grid-template-columns: auto auto auto auto;
+}
+
+#newKonto .DataForm {
+    grid-area: f;
+    height: fit-content;
+    align-self: center;
+}
+
+#newKonto .DataList {
+    grid-area: l;
+    height: fit-content;
+}

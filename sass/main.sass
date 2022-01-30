@@ -1,16 +1,29 @@
 @use 'colors'
-@use 'button'
 @use 'grid'
 @use 'input'
+@use 'form'
+@use 'menu'
+@use 'layout'
 
-button
-    @include button.button()
-    @include colors.button
+body
+    margin: 0
+    padding: 0
+
+.Menu
+    @include menu.menu()
 
 .DataGrid
     @include grid.table
     @include colors.table
 
+.DataList
+    @include colors.input
+    @include input.input
+
 .test
     @include colors.input
     @include input.input
+
+.DataForm
+    @include colors.form
+    @include form.form

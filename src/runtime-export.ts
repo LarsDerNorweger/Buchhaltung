@@ -13,3 +13,5 @@ export * from './toolkit/dom.js';
 export * from './toolkit/web-socket.js';
 export * from './toolkit/grid.js';
 export * from './toolkit/input.js';
+export * from './toolkit/form.js';
+export * from './toolkit/menu.js';
